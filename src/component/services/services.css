@@ -1,0 +1,209 @@
+.services {
+  position: relative;
+  margin-bottom: 20px;
+  padding-inline: 15px;
+}
+.services::after {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  width: calc(100%);
+  height: calc(100% + 100px);
+  top: 3px;
+  left: 0;
+  z-index: -10;
+  background-image: url("image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services::before {
+  content: "";
+  position: absolute;
+  width: calc(100%);
+  height: calc(100% + 100px);
+  top: 3px;
+  left: 0;
+  z-index: -5;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.services .content .info h1 {
+  font-size: 56px;
+  font-weight: bold;
+  color: #fb4141;
+}
+.services .content .info p {
+  color: #fff;
+  margin-top: 10px;
+  word-spacing: 2px;
+  line-height: 2;
+  font-size: 18px;
+}
+.services .content img {
+  width: 30%;
+  margin-top: 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.ser h2 {
+  color: #ff6f0a;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.ser p {
+  color: #61646c;
+  font-size: 18px;
+  line-height: 2;
+  width: 70%;
+  text-align: justify;
+  margin: 0 auto;
+}
+.services-boxs {
+  position: relative;
+  padding-bottom: 50px;
+}
+.services-boxs > p {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 70%;
+  border-bottom: 2px solid #fff;
+}
+.services-boxs::after {
+  content: "";
+  position: absolute;
+  width: calc(100%);
+  left: 0;
+  bottom: 0;
+  background-color: #1a1a1a;
+  height: 100%;
+  z-index: -20;
+}
+.boxs-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px 10px;
+  position: relative;
+}
+
+.boxs-service::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #fff;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.boxs-service .service {
+  color: #fff;
+  width: 30%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+/* .boxs-service .service:hover {
+  background-color: rgba(255, 112, 10, 0.5);
+} */
+.boxs-service .service img {
+  width: 80%;
+  margin: 0 0 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.boxs-service .service .title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #ff6f0a;
+}
+.unique .boxes {
+  position: relative;
+  row-gap: 15px;
+}
+.unique .boxes::after {
+  content: "";
+  position: absolute;
+  width: calc(100%);
+  left: 0;
+  bottom: -60px;
+  background-color: #eee;
+  height: calc(100% + 60px);
+  z-index: -20;
+}
+.unique .boxes .box:nth-of-type(1),
+.unique .boxes .box:nth-of-type(4) {
+  border-top: 3px solid #186faf;
+}
+.unique .boxes .box:nth-of-type(2) {
+  border-top: 3px solid #d64545;
+}
+.unique .boxes .box:nth-of-type(3) {
+  border-top: 3px solid #f0b429;
+}
+.unique .boxes .box {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.unique .boxes .box:hover {
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 1100px) {
+  .services-boxs::after {
+    width: calc(100%);
+    left: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .services .content img {
+    display: none;
+  }
+  .services-boxs .service {
+    width: 45%;
+  }
+  .unique .boxes .box {
+    flex-basis: 45%;
+  }
+}
+@media (max-width: 678px) {
+  .unique .boxes .box {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 567px) {
+  .services-boxs .service {
+    width: 85%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  .services-boxs .service .title {
+    font-size: 16px;
+  }
+}
